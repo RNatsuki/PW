@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- METHOD (POST, GET) -->
+    <!--
+      EL METODO GET ENVIA LOS DATOS POR LA URL
+      EL METODO POST ENVIA LOS DATOS DE FORMA OCULTA
+     -->
+
+    <!--
+      EL ATRIBUTO TARGET ES UTILIZADO PARA ESPECIFICAR DONDE SE ABRIRÁ EL ARCHIVO
+      _self: ABRE EL ARCHIVO EN LA MISMA VENTANA
+      _blank: ABRE EL ARCHIVO EN UNA NUEVA VENTANA
+      _parent: ABRE EL ARCHIVO EN EL FRAME PADRE
+      _top: ABRE EL ARCHIVO EN LA VENTANA PADRE
+
+      AUTOCOMPLETE: ESPECIFICA SI UN FORMULARIO DEBE AUTOCOMPLETARSE
+      ON: AUTOCOMPLETADO ACTIVADO
+      OFF: AUTOCOMPLETADO DESACTIVADO
+
+      NOVALIDATE: ESPECIFICA QUE EL FORMULARIO NO DEBE SER VALIDADO
+
+    -->
+
+    <!-- <form action="form.html" method="POST" target="_blank" autocomplete="off" novalidate >
+      <label for="user">Usuario</label>
+      <input type="email" id="user" name="usuario" />
+      <label>
+        password
+        <input type="password" name="contrasena" />
+      </label>
+      <input type="submit" value="Enviar datos" />
+    </form>
+    <br /><br /><br /> -->
+    <!-- ESTE DATO NO SE ENVIARÁ  -->
+    <!-- PORQUE NO SE ENCUENTRA CONTENIDO EN EL FORMULARIO -->
+    <!-- <strong> este dato no se enviará </strong>
+    <br />
+    <label for="user">Usuario</label>
+    <input type="text" id="user"  autocomplete="off"/> -->
+    <!-- ========================================= -->
+
+    <!-- Analisis de todos los tipos de entrada para el formulario -->
+
+    <!-- <form action="#">
+
+      <label>
+        Texto
+        <input
+          type="text"
+          placeholder="Esta entrada es de texto"
+          value="Daniela"
+        />
+      </label>
+    </form> -->
+    <form>
+      <input action="#" />
+      <fieldset>
+        <legend>Inputs</legend>
+        <label for="">Texto</label>
+        <!-- INPUT DE TIPO TEXTO -->
+        <input type="text" />
+        <br /><br />
+        <label for="">Contraseña</label>
+        <!-- INPUT DE TIPO PASSWORD -->
+        <input type="password" />
+      </fieldset>
+      <br /><br />
+
+      <label for="select">Lista</label>
+
+      <!--
+
+        El atributo MULTIPLE permite seleccionar varios elementos de la lista
+        El atributo SIZE especifica el número de elementos que se mostrarán en la lista
+        EL atributo DISABLED deshabilita una opción de la lista para que no pueda ser seleccionada
+       -->
+      <fieldset>
+        <legend>Lista</legend>
+        <select id="select">
+          <option value="-" disabled>-</option>
+          <option value="azul">Azul</option>
+          <option value="rojo">Rojo</option>
+          <option value="verde" selected>Verde</option>
+          <option value="amarillo">Amarillo</option>
+        </select>
+      </fieldset>
+      <br /><br />
+
+      <!--
+        El textarea es un control de formulario que permite al usuario introducir texto en múltiples líneas
+       -->
+
+      <fieldset>
+        <legend>Area de Texto y botones</legend>
+        <label for="textArea">Area de texto</label>
+        <br /><br />
+        <textarea
+          style="display: block"
+          name="description"
+          id="textArea"
+          cols="30"
+          rows="10"
+        ></textarea>
+
+        <input list="SO" />
+        <datalist id="SO">
+          <option value="Windows">Windows</option>
+          <option value="Linux">Linux</option>
+          <option value="Mac">MacOS</option>
+        </datalist>
+
+        <button type="button" onclick="alert('Alert')">Enviar</button>
+        <br /><br />
+        <button type="reset">Resetear formulario</button>
+      </fieldset>
+    </form>
+
+    <form oninput="x.value = parseInt(a.value) + parseInt(b.value)">
+      <fieldset>
+        <legend>Outputs</legend>
+        0
+        <input type="range" id="a" value="50" />
+        100 +
+        <input type="number" id="b" value="50" />
+        =
+        <output name="x" for="a b"></output>
+        <input type="submit" />
+      </fieldset>
+    </form>
+
+    <form method="GET">
+      <fieldset>
+        <legend>Radio Button</legend>
+        <label for="m"> Masculino </label>
+        <input type="radio" name="opciones" id="m" value="Masculino" />
+        <label for="f"> Femenino </label>
+        <input type="radio" name="opciones" id="f" value="Femenino" checked />
+      </fieldset>
+      <br /><br />
+      <fieldset>
+        <legend>Checkbox</legend>
+        <input type="checkbox" name="Ford" id="ford" />
+        <label for="ford">Ford</label>
+        <br />
+        <input type="checkbox" name="Honda" id="honda" checked />
+        <label for="honda">Honda</label>
+        <br />
+        <input type="checkbox" name="Toyota" id="toyota" />
+        <label for="toyota">Toyota</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Color</legend>
+        <input type="color" name="colores" />
+      </fieldset>
+      <br /><br /><br />
+
+      <fieldset>
+        <legend>Fechas</legend>
+        <input type="date" name="date" min="2024-02-22" max="2024-02-25" />
+        <input type="datetime-local" name="date-local" />
+        <input type="time" name="hour" />
+        <input type="month" name="mes" />
+        <input type="week" />
+      </fieldset>
+
+      <fieldset>
+        <legend>Email</legend>
+        <input id="email" type="email" />
+        <input type="submit" value="Enviar" />
+      </fieldset>
+      <br /><br />
+      <fieldset>
+        <legend>File</legend>
+        <label for="file">Selecccionar archivo</label>
+        <input type="file" id="file" />
+      </fieldset>
+      <br /><br />
+      <fieldset>
+        <legend>Oculto</legend>
+        <input type="text" placeholder="Este es el campo que se ve" />
+        <input type="hidden" name="oculto" value="Campo Oculto" />
+      </fieldset>
+      <br /><br />
+      <fieldset>
+        <legend>Number</legend>
+        <input type="number" name="number" min="7" max="70" step="10" />
+        <input type="range" name="range" min="2" max="5" />
+      </fieldset>
+
+      <br /><br />
+
+      <fieldset>
+        <legend>Search</legend>
+        <input type="search" />
+      </fieldset>
+
+      <br /><br />
+      <fieldset>
+        <legend>Phone</legend>
+        <input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
+      </fieldset>
+      <br /><br />
+      <fieldset>
+        <legend>URL</legend>
+        <input type="url" name="url" />
+      </fieldset>
+      <br /><br />
+      <fieldset style="display: flex; flex-direction: column; gap: 5px">
+        <legend>Atributos</legend>
+        <!-- DEFAULT DATA -->
+        <label for="defaultData">Field with default data</label>
+        <input type="text" value="uwu" id="defaultData" />
+        <!-- READONLY WITH DEFAULT DATA -->
+        <label for="redonlyField">Field with readonly data</label>
+        <input type="text" id="redonlyField" readonly value="texto de prueba" />
+        <!-- DISABLED -->
+        <label for="disabledField">Disable field</label>
+        <input type="text" id="disabledField" disabled />
+        <!-- WITH SIZE  -->
+        <label for="sizedField">field with size</label>
+        <input type="text" id="sizedField" size="10" />
+        <!-- PLACEHOLDER  -->
+        <label for="placeholder">field with placeholder</label>
+        <input type="text" id="placeholder" placeholder="placeholder" />
+
+        <!-- MAX LENGTH  -->
+        <label for="length">field with min and max</label>
+        <input type="text" id="length" maxlength="5" min="1" />
+
+        <!-- MULTIPLE FILES  -->
+        <label for="multiple">field with size</label>
+        <input type="file" id="multiple" multiple />
+
+        <!-- AUTO FOCUS  -->
+        <label for="autoFocus">field with autofocus</label>
+        <input type="text" id="autoFocus" autofocus />
+
+        <!-- AUTO COMPLETE -->
+        <label for="autoComplete">field with autocomplete</label>
+        <input type="text" id="autoComplete" autocomplete="on" />
+
+      </fieldset>
+      <br /><br /><br />
+    </form>
+  </body>
+</html>

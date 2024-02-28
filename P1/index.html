@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        background-color: #000;
+        color: white;
+      }
+
+      th,
+      td {
+        border: white 1px solid;
+      }
+
+      body {
+        align-items: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- TITULOS -->
+    <h1>Titulo 1</h1>
+    <h2>Titulo 2</h2>
+    <h3>Titulo 3</h3>
+    <h4>Titulo 4</h4>
+    <h5>Titulo 5</h5>
+    <h6>Titulo 6</h6>
+
+    <!-- LISTA ORDENADA -->
+    <ul>
+      <li>Elemento 1</li>
+      <li>Elemento 2</li>
+      <li>Elemento 3</li>
+    </ul>
+
+    <!-- LISTA DESORDENADA -->
+    <ol>
+      <li>Elemento 1</li>
+      <li>Elemento 2</li>
+      <li>Elemento 3</li>
+      <ol>
+        <li>Sub elemento 1</li>
+        <li>Sub elemento 2</li>
+      </ol>
+    </ol>
+
+    <!-- TABLAS -->
+    <table>
+      <tr>
+        <td>N Control</td>
+        <td>Nombre</td>
+        <td>Grupo</td>
+      </tr>
+      <tr>
+        <td>21100004</td>
+        <td>Avisay</td>
+        <td>ISC6-A</td>
+      </tr>
+      <tr>
+        <!-- COMBINAR COLUMNAS -->
+        <td colspan="3">Instituto tecnologico Superior de Coalcoman</td>
+      </tr>
+    </table>
+    <br /><br />
+
+    <table>
+      <tr>
+        <th>N Control</th>
+        <th>Nombre</th>
+        <th>Grupo</th>
+      </tr>
+
+      <tr>
+        <td>21100004</td>
+        <td>Avisay</td>
+        <td>ISC6-A</td>
+      </tr>
+
+      <tr>
+        <!-- COMBINAR FILA -->
+        <td rowspan="2">1</td>
+        <td>2</td>
+        <td>3-A</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>1-A</td>
+      </tr>
+    </table>
+
+    <br /><br />
+    <table>
+      <thead>
+        <tr>
+          <th>N Control</th>
+          <th>Nombre</th>
+          <th>Grupo</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>21100004</td>
+          <td>Avisay</td>
+          <td>ISC6-A</td>
+        </tr>
+        <tr>
+          <td rowspan="2">1</td>
+          <td>2</td>
+          <td>3-A</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>1-A</td>
+        </tr>
+      </tbody>
+
+      <tbody>
+        <tr>
+          <td colspan="3">Instituto tecnologico Superior de Coalcoman</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- MULTIMEDIA -->
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 20px;
+        gap: 20px;
+      "
+    >
+      <img
+        width="100%"
+        src="/multimedia//img//wallpaperflare.com_wallpaper (3).jpg"
+        alt="Unix image"
+      />
+      <br /><br /><br />
+      <img
+        src="https://media.vandal.net/i/1200x675/96054/demon-slayer-kimetsu-no-yaiba-the-hinokami-chronicles-20218111174875_1.jpg"
+        alt="Demon Slayer"
+        width="100%"
+      />
+
+      <!-- AUDIO -->
+
+      <audio
+        controls
+        src="multimedia/audio/A veces yo gomito - la era del hielo 2 [TubeRipper.com].m4a"
+      ></audio>
+
+      <!-- VIDEO -->
+      <video
+        controls
+        autoplay
+        src="multimedia/video/A veces yo gomito - la era del hielo 2.mp4"
+      ></video>
+
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/YNzslNrkVDw?si=0LVz23Sh4OiR8acI"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <object
+      data="https://tecnmstorage.netlify.app/auth/login"
+      width="100%"
+      height="500px"
+    ></object>
+
+    <img src="multimedia/img/compu.jpeg" alt="Escritorio" usemap="#mapeo" />
+
+    <map name="mapeo">
+      <area
+        shape="rect"
+        coords="34,44,270,350"
+        alt="Computadora"
+        target="_blank"
+        href="https://www.apple.com/mx/macbook-pro/"
+      />
+      <area
+        shape="rect"
+        coords="290,172,333,250"
+        alt="Telefono"
+        target="_blank"
+        href="https://www.apple.com/mx/iphone-15-pro/"
+      />
+      <area
+        shape="circle"
+        coords="337,300,44"
+        alt="Cafe"
+        target="_blank"
+        href="https://www.starbucks.com.mx/"
+      />
+    </map>
+  </body>
+</html>
