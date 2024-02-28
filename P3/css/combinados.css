@@ -1,0 +1,37 @@
+
+/* ================================================================================= */
+/* ======================================= */
+/* SELECTORES COMBINADOS */
+/* ======================================= */
+/* ================================================================================= */
+
+/* Selector descendiente */
+h6,
+main {
+  background-color: skyblue;
+}
+
+p .nRojo {
+  color: green;
+}
+
+/* Selector de grupo descediente */
+
+div .fondo {
+  background-color: lightgreen;
+}
+
+/* Selector de hijo directo */
+div > p {
+  background-color: aquamarine;
+}
+
+/* Selector adyacente */
+p + div {
+  color: blueviolet;
+}
+
+/* Selector de general */
+.class__1 ~ .class__2 {
+  background-color: brown;
+}

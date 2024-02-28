@@ -1,0 +1,27 @@
+/* ================================================================================= */
+/* ======================================= */
+/* SELECTORES SIMPLES */
+/* ======================================= */
+/* ================================================================================= */
+/* Selector Universal */
+* {
+  text-align: center;
+}
+
+/* Selector de tipo */
+h1 {
+  color: red;
+}
+section {
+  background-color: lightblue;
+}
+
+/* Selector de ID */
+#parrafo {
+  font-size: 20px;
+}
+
+/* Selector de clase */
+.nRojo {
+  color: red;
+}

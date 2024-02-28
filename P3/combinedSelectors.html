@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/combinados.css" />
+    <title>Combined Selectors</title>
+  </head>
+  <body>
+    <!-- EJEMPLO DE SELECTOR DESCENDIENTE -->
+    <fieldset>
+      <legend>Selector descendiente</legend>
+      <div>
+        <p class="fondo">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+          eveniet mollitia, atque commodi, voluptates, quisquam numquam
+          blanditiis voluptatibus placeat quasi ratione id modi maiores
+          perferendis dolorum labore vel ullam quo!
+        </p>
+        <i class="fondo">Este es un texto cursivo</i>
+      </div>
+
+      <p class="fondo">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus excepturi
+        ipsum sit corporis, repudiandae magni labore consequatur iusto atque
+        voluptate quidem. Ipsum, tempora quis! Nobis veritatis incidunt
+        voluptatibus vero ad.
+      </p>
+    </fieldset>
+    <br />
+    <!-- SELECTOR HIJO DIRECTO -->
+    <fieldset>
+      <legend>Selector hijo directo ></legend>
+      <div>
+        <label>
+          <p>Hijo indirecto</p>
+        </label>
+        <p>Hijo directo</p>
+      </div>
+    </fieldset>
+    <br />
+
+    <!-- SELECTOR ADYACENTE -->
+    <fieldset>
+      <legend>Selector adyacente +</legend>
+      <p>uwu</p>
+      <div>Div</div>
+
+      <hr />
+      <p>Aqui</p>
+      <i>ya</i>
+      <div>No funciona</div>
+    </fieldset>
+    <br />
+    <!-- SELECTOR General -->
+    <fieldset>
+      <legend>Selector General ~</legend>
+      <p class="class__1">Selector</p>
+      <i>asda</i>
+      <p class="class__2">General</p>
+    </fieldset>
+
+    <fieldset>
+      <legend>Selctor de attributo</legend>
+      <input type="text" />
+      <input type="password" />
+    </fieldset>
+  </body>
+</html>
