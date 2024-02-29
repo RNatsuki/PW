@@ -1,0 +1,88 @@
+* {
+  text-align: center;
+  margin-top: 0.2rem;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #09f;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0cf;
+}
+
+/* PSEUDO CLASE PARA EL CAMPO DE TEXTO */
+
+#texto {
+  border: gray 2px solid;
+  border-radius: 3px;
+  text-align: center;
+}
+
+#texto:focus {
+  background-color: rgb(198, 199, 199);
+  outline: none;
+}
+
+/* PSEUDOCLASES PARA EL ENLACE */
+.estilo:link {
+  text-decoration: none;
+  color: red;
+}
+
+.estilo:hover {
+  text-decoration: underline;
+  color: green;
+}
+
+.estilo:active {
+  text-decoration: none;
+  color: yellow;
+}
+
+.estilo:visited {
+  text-decoration: none;
+  color: gray;
+}
+
+/* PSEUDOCLASE PARA MOSTRAR EL PARRAFO */
+
+p {
+  background-color: darkgray;
+  padding: 20px;
+  display: none;
+}
+
+.selected:hover p {
+  display: block;
+}
+
+/* PSEUDOCLASE PARA EL PRIMER HIJO DEL CONTENEDOR */
+
+b:first-child {
+  color: red;
+}
+
+
+section::first-letter{
+  font-size: 2rem;
+  color: red;
+  font-weight: bold;
+}
+
+section::first-line{
+  font-size: 1.5rem;
+  color: blue;
+  font-weight: bold;
+}
+
+section::after{
+  content: " - Fin del texto";
+  color: green;
+  font-weight: bold;
+}
