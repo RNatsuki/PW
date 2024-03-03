@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="index.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>CSS Classes & Pseudoelements</title>
+  </head>
+  <body>
+    <button class="active">Click me!</button>
+
+    <label>
+      Checked
+      <input id="checkbox" type="checkbox" />
+    </label>
+
+    <form action="#">
+      <input type="submit" value="Yes">
+      <input type="submit" value="No">
+    </form>
+
+
+    <div dir="rtl">
+      <span>test1</span>
+      <div dir="ltr">
+        test2
+        <div dir="auto">עִבְרִית</div>
+      </div>
+    </div>
+
+    <input id="disabled" type="text" disabled>
+    <input id="empty" type="text">
+    <input id="enabled" type="text">
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+
+    <ol id="first-type">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <div>Hello im first DIV</div>
+      <div>Im 2nd</div>
+    </ol>
+
+    <div class="element">
+      <h1>MDN :fullscreen pseudo-class demo</h1>
+
+      <p>
+        This demo uses the <code>:fullscreen</code> pseudo-class to automatically
+        change the background color of the <code>.element</code> div.
+      </p>
+
+      <p>
+        Normally, the background is light yellow. In fullscreen mode, the background
+        is light pink.
+      </p>
+
+      <button class="toggle">Toggle Fullscreen</button>
+    </div>
+
+    <input id="focus" type="text" placeholder="focused">
+
+    <button id="hover">
+      Hover me!
+    </button>
+
+    <fieldset>
+      <legend>Checkbox</legend>
+      <div>
+        <input type="checkbox" id="checkbox" />
+        <label for="checkbox">This checkbox label starts out lime.</label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Radio</legend>
+      <div>
+        <input type="radio" id="radio1" name="radioButton" value="val1" />
+        <label for="radio1">First radio label starts out lime.</label>
+      </div>
+      <div>
+        <input type="radio" id="radio2" name="radioButton" value="val2" />
+        <label for="radio2">Second radio label also starts out lime.</label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>In Range</legend>
+        <input id="in-range" type="number" id="range" min="0" max="100" value="50">
+    </fieldset>
+
+    <fieldset>
+      <legend>Invalid</legend>
+      <input id="invalid" type="text" required>
+    </fieldset>
+
+    <fieldset>
+      <legend>Lang</legend>
+      <p lang="en">This is English text.</p>
+      <p lang="fr">Ceci est du texte en français.</p>
+    </fieldset>
+
+  </body>
+</html>

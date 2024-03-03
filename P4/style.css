@@ -1,0 +1,170 @@
+input {
+  margin: 1em;
+  padding: 0.6em 1em;
+  font-size: 1em;
+  width: 100px;
+  margin-bottom: 1em;
+}
+
+.active {
+  width: 10em;
+  height: 5ex;
+  background-image: linear-gradient(135deg, #f34079 40%, #fc894d);
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+.active:active {
+  box-shadow: 2px 2px 5px #fc894d;
+}
+
+#checkbox:checked {
+  border: none;
+  outline: 2px solid deeppink;
+}
+
+/* FOR DEFAULT */
+input[type="submit"] {
+  padding: 0.6em 1em;
+  font-size: 1em;
+  width: 100px;
+  margin-bottom: 1em;
+}
+input[type="submit"]:default {
+  border: 4px dotted #8ebf42;
+}
+
+/* FOR DIR */
+input[type="submit"] {
+  padding: 0.6em 1em;
+  font-size: 1em;
+  width: 100px;
+  margin-bottom: 1em;
+}
+input[type="submit"]:dir(rtl) {
+  border: 4px dotted #8ebf42;
+}
+
+:dir(rtl) {
+  background-color: powderblue;
+}
+
+/* FOR DISABLED */
+
+#disabled {
+  padding: 0.6em 1em;
+  font-size: 1em;
+  width: 100px;
+  margin-bottom: 1em;
+}
+
+#disabled:disabled {
+  background-color: red;
+  color: #c4c4c4;
+  cursor: not-allowed;
+}
+
+/* FOR EMPTY */
+
+#empty:empty {
+  background-color: salmon;
+  color: #c4c4c4;
+  cursor: not-allowed;
+}
+
+
+/* FOR ENABLED */
+
+#enabled {
+  padding: 0.6em 1em;
+  font-size: 1em;
+  width: 100px;
+  margin-bottom: 1em;
+}
+
+#enabled:enabled {
+  background-color: green;
+  color: #c4c4c4;
+  cursor: pointer;
+}
+
+/* FOR FIRST-CHILD */
+
+ul li:first-child {
+  background-color: #f4f4f4;
+  padding: 0.6em 1em;
+  font-size: 1em;
+  width: 100px;
+  margin-bottom: 1em;
+}
+
+/* FOR FIRST-OF-TYPE */
+
+#first-type div:first-of-type {
+  background-color: #f4f4f4;
+  padding: 0.6em 1em;
+  font-size: 1em;
+  width: 100px;
+  margin-bottom: 1em;
+}
+
+
+/* FOR FULLSCREEN */
+
+.element {
+  background-color: lightyellow;
+}
+
+.element:fullscreen {
+  background-color: lightpink;
+}
+
+
+/* FOR FOCUS */
+
+#focus {
+  padding: 0.6em 1em;
+  font-size: 1em;
+  width: 100px;
+  margin-bottom: 1em;
+}
+
+#focus:focus {
+  background-color: lightblue;
+}
+
+/* FOR HOVER */
+
+#hover {
+  padding: 0.6em 1em;
+  font-size: 1em;
+  width: 100px;
+  margin-bottom: 1em;
+}
+
+#hover:hover {
+  background-color: lightblue;
+}
+
+/* FOR INDETERMINATE */
+input:indeterminate + label {
+  background: lime;
+}
+
+/* FOR IN-RANGE */
+#in-range:in-range {
+  background: lightgreen;
+}
+
+/* FOR INVALID */
+#invalid:invalid {
+  background: lightcoral;
+}
+
+/* FOR LANG */
+:lang(en) {
+  background-color: lightblue;
+}
