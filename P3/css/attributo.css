@@ -21,10 +21,33 @@ a[target="_Self"] {
 }
 
 img {
-  width: 100%;
+  width: 200px;
 }
 
 /* SELECTOR POR MEDIO DE UNA PALABRA DE UN ATTRIBUTO */
-[alt*="anime"] {
+[alt~="science"] {
   border: 5px solid red;
+}
+
+[alt|="anime"] {
+  border: 5px solid blue;
+}
+
+/* Busca al inicio una coincidencia */
+[class^="ti"] {
+  font-size: 10px;
+}
+
+[class$="afo"] {
+  font-size: 20px;
+  color: blue;
+}
+/*
+  Busca en cualquier parte del atributo
+  [class*="div"] {
+*/
+[class*="di"] {
+  font-size: 30px;
+  color: #09f;
+  background-color: rebeccapurple;
 }
