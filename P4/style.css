@@ -168,3 +168,15 @@ input:indeterminate + label {
 :lang(en) {
   background-color: lightblue;
 }
+
+.last-child:last-child {
+  background-color: #f4f4f4;
+  padding: 0.6em 1em;
+  font-size: 1em;
+  width: 100px;
+  margin-bottom: 1em;
+}
+
+.last-type p:last-of-type{
+  background-color: red;
+}

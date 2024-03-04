@@ -1,0 +1,30 @@
+/* SELECTOR DE ETIQUETA */
+a {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  margin: 10px 5px 0px;
+  text-decoration: none;
+  color: green;
+}
+
+/* SELECTOR DE ATTRIBUTO */
+a[target] {
+  background-color: gray;
+  color: white;
+}
+/* SELECTOR DE ATRIBUTO CON VALOR ESPECÍFICO */
+a[target="_Self"] {
+  color: yellow;
+  background-color: salmon;
+}
+
+img {
+  width: 100%;
+}
+
+/* SELECTOR POR MEDIO DE UNA PALABRA DE UN ATTRIBUTO */
+[alt*="anime"] {
+  border: 5px solid red;
+}
