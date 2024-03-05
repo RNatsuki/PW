@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejemplo de Pseudoelementos</title>
+  <style>
+    p::after {
+      content: " - Agregado después del párrafo";
+      font-weight: bold;
+    }
+
+    p::before {
+      content: "Antes del texto: ";
+      color: red;
+    }
+
+    p::first-letter {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    p::first-line {
+      text-transform: uppercase;
+      color: blue;
+    }
+
+    ::selection {
+      background-color: yellow;
+      color: black;
+    }
+
+    .modal::backdrop {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    input::placeholder {
+      color: gray;
+      font-style: italic;
+    }
+
+    ul::marker {
+      color: red;
+      font-weight: bold;
+    }
+
+    ::spelling-error {
+      text-decoration: wavy underline red;
+    }
+
+    ::grammar-error {
+      text-decoration: line-through;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Ejemplo de Pseudoelementos</h1>
+    <p>Este es un párrafo</p>
+    <p>Este es otro párrafo</p>
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+    <input type="text" placeholder="Escribe aquí">
+    <div class="modal">
+      <p>Contenido del modal</p>
+    </div>
+    <p>Texto con errores ortográficos</p>
+    <p>Texto con errores gramaticales</p>
+  </div>
+</body>
+</html>
