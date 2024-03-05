@@ -1,0 +1,58 @@
+/* Estilo base */
+:root {
+  --clr-dark: #333;
+  --clr-light: #f4f4f4;
+  --clr-accent: #e11d48;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  word-spacing: 1.4px;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 80%;
+  height: 700px;
+  margin: 0 auto;
+  border-radius: 10px;
+  border: 10px solid var(--clr-dark);
+}
+
+.item {
+  width: 150px;
+  height: 150px;
+  background-color: #fb7185;
+  padding: 1em;
+  font-weight: 700;
+  color: var(--clr-light);
+  border: 10px solid var(--clr-accent);
+}
+
+/* USO DE FLEX */
+.container {
+  display: flex; /*
+  justify-content: start;
+  flex-wrap: wrap; */
+  align-items: flex-start;
+}
+
+.item-1 {
+  /* font-size: 1.5rem;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 300px; */
+  /* align-self: center; */
+}
