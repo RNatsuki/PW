@@ -83,7 +83,6 @@ function intNumber() {
 
 function floatNumber() {
   const { value } = $("#input-float-number");
-  // digit, dot, infinite digits
   const regEx = /^-?[0-9]+\.[0-9]+$/;
 
   if (!value) return;
@@ -106,3 +105,10 @@ function postalCode() {
     $("#input-postal-code").value = "";
   }
 }
+
+const myObject = {
+  name: "Ibarra",
+  age: 21,
+};
+
+const { name } = myObject;
