@@ -1,6 +1,6 @@
 const $ = (element) => document.querySelector(element);
 
-function text(event) {
+function text() {
   const { value } = $("#input-text");
 
   const regEx = /^([a-zA-Z\s])+$/;
@@ -52,6 +52,19 @@ function url() {
   if (!regEx.test(value)) {
     alert(`La URL ${value} no es válida`);
     $("#input-url").value = "";
+  }
+}
+
+function phoneNumber() {
+  const { value } = $("#input-phone-number");
+
+  const regEx = /^\d{10}$/;
+
+  if (!value) return;
+
+  if (!regEx.test(value)) {
+    alert("El número de teléfono no es válido");
+    $("#input-phone-number").value = "";
   }
 }
 
