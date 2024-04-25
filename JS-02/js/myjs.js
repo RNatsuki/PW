@@ -2,7 +2,7 @@ const $ = (element) => document.querySelector(element);
 
 const clearErrors = () => {
   // Remueve todos los elementos con clase 'error-message'
-  const errorMessages = document.querySelectorAll('.error-message');
+  const errorMessages = document.querySelectorAll(".error-message");
   errorMessages.forEach((msg) => msg.remove());
 };
 
@@ -25,7 +25,7 @@ const validation = () => {
       element: $("#input-password"),
       regEx:
         /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]).{8,}$/,
-      message: "La contraseña no es válida",
+      message: "La contraseña no cumple con los requisitos mínimos",
     },
     url: {
       element: $("#input-url"),
@@ -59,15 +59,29 @@ const validation = () => {
   for (const field in fields) {
     const { element, regEx, message } = fields[field];
 
-    if (!element.value) continue; // No validar campos vacíos
+    if (!element.value) {
+      //pon el mensaje de error para campos vacíos
+      const error = document.createElement("p");
+      error.style.color = "red";
+      error.style.fontSize = "12px";
+      error.textContent = "Este campo no puede estar vacío";
+      error.classList.add("error-message");
+      element.insertAdjacentElement("afterend", error);
+      isValid = false;
+
+      continue;
+    } // No validar campos vacíos
 
     if (!regEx.test(element.value)) {
       // Crea un mensaje de error solo si no existe ya
-      if (!element.nextElementSibling || !element.nextElementSibling.classList.contains('error-message')) {
+      if (
+        !element.nextElementSibling ||
+        !element.nextElementSibling.classList.contains("error-message")
+      ) {
         const error = document.createElement("p");
         error.textContent = message;
         error.classList.add("error-message");
-        element.insertAdjacentElement('afterend', error);
+        element.insertAdjacentElement("afterend", error);
       }
       isValid = false;
     }
