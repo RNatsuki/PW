@@ -10,19 +10,31 @@
 <body>
   <?php
 
-  echo $_POST['text'] . "<br/>";
-  echo $_POST['email'] . "<br/>";
-  echo $_POST['password'] . "<br/>";
-  echo $_POST['url'] . "<br/>";
-  echo $_POST['int'] . "<br/>";
-  echo $_POST['phone'] . "<br/>";
-  echo $_POST['float'] . "<br/>";
-  echo $_POST['postal'] . "<br/>";
+  $var1 = $_POST['text'];
+  $var2 = $_POST['email'];
+  $var3 = $_POST['password'];
+  $var4 = $_POST['url'];
+  $var5 = $_POST['int'];
+  $var6 = $_POST['phone'];
+  $var7 = $_POST['float'];
+  $var8 = $_POST['postal'];
 
   ?>
 
 
+  <h1>Recibiendo datos</h1>
 
+  <div>
+    <input type="text" value="<?= $var1; ?>">
+    <input type="text" value="<?= $var2; ?>">
+    <input type="text" value="<?= $var3; ?>">
+    <input type="text" value="<?= $var4; ?>">
+    <input type="text" value="<?= $var5; ?>">
+    <input type="text" value="<?= $var6; ?>">
+    <input type="text" value="<?= $var7; ?>">
+    <input type="text" value="<?= $var8; ?>">
+
+  </div>
 
 
 
