@@ -16,67 +16,80 @@
       class="bg-white w-[500px] p-10 rounded-lg shadow-lg flex flex-col items-center gap-5"
     >
       <h1 class="uppercase text-lg">Validaciones Con JavaScript</h1>
-      <input
-        autocomplete="off"
-        class="border p-2 border-black rounded-lg w-full"
-        type="text"
-        placeholder="Campo de texto"
-        id="input-text"
-      />
-      <input
-        autocomplete="off"
-        class="border p-2 border-black rounded-lg w-full"
-        type="email"
-        placeholder="Correo Electrónico"
-        id="input-email"
-      />
-      <input
-        autocomplete="off"
-        class="border p-2 border-black rounded-lg w-full"
-        type="text"
-        placeholder="Contraseña"
-        id="input-password"
-      />
-      <input
-        autocomplete="off"
-        class="border p-2 border-black rounded-lg w-full"
-        type="url"
-        placeholder="URL"
-        id="input-url"
-      />
-      <input
-        autocomplete="off"
-        class="border p-2 border-black rounded-lg w-full"
-        type="phone"
-        placeholder="Numeros enteros"
-        id="input-int-number"
-      />
-      <input
-        autocomplete="off"
-        class="border p-2 border-black rounded-lg w-full"
-        type="phone"
-        placeholder="Numero de telefono"
-        id="input-phone-number"
-      />
+      <form id="form" action="recibe.php" method="POST">
+        <input
+          autocomplete="off"
+          class="border p-2 border-black rounded-lg w-full"
+          type="text"
+          placeholder="Campo de texto"
+          id="input-text"
+          name="text"
+        />
+        <input
+          autocomplete="off"
+          class="border p-2 border-black rounded-lg w-full"
+          type="email"
+          placeholder="Correo Electrónico"
+          id="input-email"
+          name="email"
+        />
+        <input
+          autocomplete="off"
+          class="border p-2 border-black rounded-lg w-full"
+          type="text"
+          placeholder="Contraseña"
+          id="input-password"
+          name="password"
+        />
+        <input
+          autocomplete="off"
+          class="border p-2 border-black rounded-lg w-full"
+          type="url"
+          placeholder="URL"
+          id="input-url"
+          name="url"
+        />
+        <input
+          autocomplete="off"
+          class="border p-2 border-black rounded-lg w-full"
+          type="phone"
+          placeholder="Numeros enteros"
+          id="input-int-number"
+          name="int"
+        />
+        <input
+          autocomplete="off"
+          class="border p-2 border-black rounded-lg w-full"
+          type="phone"
+          placeholder="Numero de telefono"
+          id="input-phone-number"
+          name="phone"
+        />
 
-      <input
-        autocomplete="off"
-        class="border p-2 border-black rounded-lg w-full"
-        type="text"
-        placeholder="Numeros Decimales"
-        id="input-float-number"
-      />
-      <input
-        autocomplete="off"
-
-        class="border p-2 border-black rounded-lg w-full"
-        type="text"
-        placeholder="Codigo Postal"
-        id="input-postal-code"
-      />
-      <button
-        id="btn-submit"
-      class="bg-pink-300 p-5 rounded-lg w-[40%]">Enviar</button>
+        <input
+          autocomplete="off"
+          class="border p-2 border-black rounded-lg w-full"
+          type="text"
+          placeholder="Numeros Decimales"
+          id="input-float-number"
+          name="float"
+        />
+        <input
+          autocomplete="off"
+          class="border p-2 border-black rounded-lg w-full"
+          type="text"
+          placeholder="Codigo Postal"
+          id="input-postal-code"
+          name="postal"
+        />
+        <button
+          type="submit"
+          id="btn-submit"
+          class="bg-pink-300 p-5 rounded-lg w-[40%]"
+        >
+          Enviar
+        </button>
+      </form>
     </div>
   </body>
 </html>
