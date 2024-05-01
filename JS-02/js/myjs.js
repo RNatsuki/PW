@@ -9,6 +9,15 @@ const clearErrors = () => {
   errorMessages.forEach((msg) => msg.remove());
 };
 
+const generateErrorMessage = (element, message) => {
+  const error = document.createElement("p");
+  error.style.color = "red";
+  error.style.fontSize = "12px";
+  error.textContent = message;
+  error.classList.add("error-message");
+  element.insertAdjacentElement("beforebegin", error);
+};
+
 // Función para validar campos del formulario
 const validation = () => {
   // Limpia errores previos
@@ -17,9 +26,9 @@ const validation = () => {
   // Define los campos del formulario y sus reglas de validación
   const fields = {
     // Campo de texto solo con letras y espacios
-    text: {
-      element: $("#input-text"), // Elemento HTML para el campo de texto
-      regEx: /^([a-zA-Z\s])+$/, // Expresión regular para validar
+    select: {
+      element: $("#country"), // Elemento HTML para el campo de texto
+      regEx: /./, // Expresión regular para validar
       message: "Solo se aceptan letras", // Mensaje de error
     },
     // Campo de correo electrónico
@@ -65,25 +74,31 @@ const validation = () => {
       regEx: /^\d{5}$/, // Requiere 5 dígitos
       message: "El código postal no es válido", // Mensaje de error
     },
+    fileChosser: {
+      element: $("#file-chooser"),
+      regEx: /./,
+      message: "Debe seleccionar un archivo",
+      isFile: true,
+    },
   };
 
   let isValid = true; // Variable para indicar si el formulario es válido
 
   // Recorre cada campo definido para validar
   for (const field in fields) {
-    const { element, regEx, message } = fields[field]; // Extrae información del campo
+    const { element, regEx, message, isfile } = fields[field]; // Extrae información del campo
+
+    if (isfile && !element.files[0]) {
+      generateErrorMessage(element, message);
+      isValid = false;
+      continue;
+    }
 
     if (!element.value) {
       // Si el campo está vacío
-      // Crea un mensaje de error para campos vacíos
-      const error = document.createElement("p");
-      error.style.color = "red"; // Cambia el color del texto a rojo
-      error.style.fontSize = "12px"; // Establece el tamaño de la fuente
-      error.textContent = "Este campo no puede estar vacío"; // Mensaje para campos vacíos
-      error.classList.add("error-message"); // Añade clase para identificar errores
-      element.insertAdjacentElement("beforebegin", error); // Añade el mensaje de error después del campo
+      generateErrorMessage(element, "Este campo es obligatorio"); // Genera mensaje de error
       isValid = false; // Indica que el formulario no es válido
-      continue; // Pasa al siguiente campo sin más validación
+      continue; // Continúa con el siguiente campo
     }
 
     if (!regEx.test(element.value)) {
@@ -92,13 +107,8 @@ const validation = () => {
         !element.nextElementSibling ||
         !element.nextElementSibling.classList.contains("error-message")
       ) {
-        // Crea mensaje de error si no existe ya
-        const error = document.createElement("p");
-        error.textContent = message; // Texto de error según el tipo de campo
-        error.style.color = "red"; // Cambia el color del texto a rojo
-        error.style.fontSize = "12px"; // Establece el tamaño de la fuente
-        error.classList.add("error-message"); // Añade clase para errores
-        element.insertAdjacentElement("beforebegin", error); // Añade después del campo
+        // Si no hay un mensaje de error previo
+        generateErrorMessage(element, message); // Genera mensaje de error
       }
       isValid = false; // Indica que el formulario no es válido
     }
