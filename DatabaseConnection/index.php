@@ -1,6 +1,5 @@
 <?php
-include_once 'vendor/autoload.php';
-use Illuminate\Database\Capsule\Manager as Capsule;
+include_once 'mysqli.php';
 ?>
 
 <!DOCTYPE html>
@@ -16,8 +15,9 @@ use Illuminate\Database\Capsule\Manager as Capsule;
   <h1>Database Connection</h1>
   <?php
 
-    $data = Capsule::table('users')->get();
-
+  $database =  DatabaseConnectionMysqli::get_instance();
+  $database2 = DatabaseConnectionMysqli::get_instance();
+  print_r($database === $database2 ? "true": "false");
 
   ?>
 </body>
