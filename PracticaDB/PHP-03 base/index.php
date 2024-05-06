@@ -1,9 +1,19 @@
 <?php
 include_once 'db.php';
 
-$data = DatabaseConnectionMysqli::get_instance()->query("SELECT * FROM producto");
+$categoria = $_GET['categoria'] ?? null;
+
+$data = null;
+
+if (is_null($categoria)) {
+  $data = DatabaseConnectionMysqli::get_instance()->query("SELECT * FROM producto");
+} else {
+  $data = DatabaseConnectionMysqli::get_instance()->query("SELECT * FROM producto WHERE categoria = '$categoria'");
+}
+
 
 $products = $data->fetch_all(MYSQLI_ASSOC);
+
 
 ?>
 
@@ -44,7 +54,7 @@ $products = $data->fetch_all(MYSQLI_ASSOC);
     }
 
     #card-body {
-      min-height: 450px;
+      min-height: 600px;
     }
   </style>
 
@@ -62,7 +72,7 @@ $products = $data->fetch_all(MYSQLI_ASSOC);
         <ul class="navbar-nav flex-grow-1 justify-content-between">
           <li class="nav-item d-none d-xs-block d-md-block"><a class="nav-link" href="index.php"><i class="icon ion-ios-game-controller-b apple-logo"></i></a></li>
           <li class="nav-item dropdown"><a class="dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" href="#">Categorías&nbsp;</a>
-            <div class="dropdown-menu"><a class="dropdown-item" href="#">Todos</a><a class="dropdown-item" href="#">Anime</a><a class="dropdown-item" href="#">Videojuegos</a></div>
+            <div class="dropdown-menu"><a class="dropdown-item" href="index.php">Todos</a><a class="dropdown-item" href="index.php?categoria=anime">Anime</a><a class="dropdown-item" href="index.php?categoria=videojuegos">Videojuegos</a></div>
           </li>
         </ul>
       </div>
@@ -82,13 +92,23 @@ $products = $data->fetch_all(MYSQLI_ASSOC);
           <!-- Card Begins  -->
           <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
             <div class="card rounded shadow-sm border-0" id="tarjeta">
+              <div class="card-header bg-transparent border-0 text-center text-uppercase font-weight-bold">
+                <strong><?= $product['categoria'] ?></strong>
+              </div>
               <div id="card-body" class="card-body p-4">
-                <img src="
-                <?= "data:image/jpeg;base64," . base64_encode($product["imagen"]); ?>
+                <img class="
+                card-img-top rounded
+                img-fluid d-block mx-auto
+                mb-3 cover" src="<?= "data:image/jpeg;base64," . base64_encode($product["imagen"]); ?>
 
                 " alt="" class="img-fluid d-block mx-auto mb-3">
                 <h5> <a href="#" class="text-dark"><?= $product["nombre"] ?></a></h5>
                 <p id="parrafoAltura" class="small text-muted font-italic"><?= $product["descripcion"] ?></p>
+
+                <div>
+                  <span class="text-muted">$<?= $product["precio"] ?></span>
+                </div>
+
                 <button type="button" class="btn btn-success">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
                     <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"></path>
