@@ -6,9 +6,9 @@ $categoria = $_GET['categoria'] ?? null;
 $data = null;
 
 if (is_null($categoria)) {
-  $data = DatabaseConnectionMysqli::get_instance()->query("SELECT * FROM producto");
+  $data = DatabaseConnectionMysqli::query("SELECT * FROM producto");
 } else {
-  $data = DatabaseConnectionMysqli::get_instance()->query("SELECT * FROM producto WHERE categoria = '$categoria'");
+  $data = DatabaseConnectionMysqli::query("SELECT * FROM producto WHERE categoria = '$categoria'");
 }
 
 
@@ -63,9 +63,9 @@ $products = $data->fetch_all(MYSQLI_ASSOC);
 
 <body>
 
-    <?php
-    include_once 'menu.php';
-     ?>
+  <?php
+  include_once 'menu.php';
+  ?>
 
   <div class="bootstrap_cards2">
     <div class="container py-5">

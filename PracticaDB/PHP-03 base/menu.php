@@ -10,6 +10,7 @@
         <li class="nav-item dropdown"><a class="dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" href="#">Categorías&nbsp;</a>
           <div class="dropdown-menu"><a class="dropdown-item" href="index.php">Todos</a><a class="dropdown-item" href="index.php?categoria=anime">Anime</a><a class="dropdown-item" href="index.php?categoria=videojuegos">Videojuegos</a>
             <a class="dropdown-item" href="registrarProducto.php">Registrar</a>
+            <a class="dropdown-item" href="lista.php">Listar Productos</a>
           </div>
         </li>
       </ul>

@@ -10,6 +10,15 @@ class DatabaseConnectionMysqli
   public static  $connection;
 
 
+  public static function query(string $query)
+  {
+    $instance = self::get_instance();
+
+    return $instance->query($query);
+  }
+
+  
+
   public static function get_instance()
   {
     try {
