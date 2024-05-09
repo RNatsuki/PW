@@ -103,7 +103,7 @@ $products = $data->fetch_all(MYSQLI_ASSOC);
             <td class="border ">
               <div class="d-flex gap-2   ">
                 <a href="editar.php?id=<?= $product['id'] ?>" class="btn btn-warning">Editar</a>
-                <a href="eliminar.php?id=<?= $product['id'] ?>" class="btn btn-danger">Eliminar</a>
+                <a href="./functions/eliminar.php?id=<?= $product['id'] ?>" class="btn btn-danger">Eliminar</a>
               </div>
             </td>
           </tr>

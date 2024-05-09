@@ -81,7 +81,7 @@ $product = $data->fetch_all(MYSQLI_ASSOC);
                   <textarea class="form-control" id="message-2" name="descripcion" rows="6" placeholder="Descripción" required><?= $product[0]['descripcion'] ?></textarea>
                 </div>
                 <div class="mb-3">
-                  <input value="<?= $product[0]['precio'] ?>" class="form-control" type="number" name="precio" placeholder="$Precio" required>
+                  <input value="<?= $product[0]['precio'] ?>" class="form-control" type="number" name="precio" placeholder="$Precio">
                 </div>
                 <div class="mb-3">
                   <select class="form-select" name="categoria">
