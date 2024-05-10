@@ -1,13 +1,8 @@
 <?php
 include_once 'db.php';
-
 $id = $_GET['id'] ?? "1";
-
 $data = DatabaseConnectionMysqli::get_instance()->query("SELECT * FROM producto WHERE id = '$id'");
-
-
 $product = $data->fetch_all(MYSQLI_ASSOC);
-
 
 ?>
 
@@ -28,8 +23,6 @@ $product = $data->fetch_all(MYSQLI_ASSOC);
   <link rel="stylesheet" href="assets/css/MENU-Navbar---Apple.css">
   <link rel="stylesheet" href="assets/css/MENU.css">
   <link rel="stylesheet" href="assets/css/reparandoMenuResponsivo.css">
-
-
   <style>
     /*Estilo para ajustar los parrafos a una cantidad de renglones */
     #parrafoAltura {
@@ -46,13 +39,10 @@ $product = $data->fetch_all(MYSQLI_ASSOC);
       left: 50%;
       transform: translateX(-50%);
     }
-
     #card-body {
       min-height: 600px;
     }
   </style>
-
-
 </head>
 
 <body>
@@ -100,9 +90,7 @@ $product = $data->fetch_all(MYSQLI_ASSOC);
       </div>
     </div>
   </section>
-
   <script src="assets/bootstrap/js/bootstrap.min.js"></script>
   <script src="assets/js/MENU-Navbar---Apple.js"></script>
 </body>
-
 </html>

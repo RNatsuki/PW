@@ -1,20 +1,11 @@
 <?php
 include 'db.php';
 
-
 $instance = DatabaseConnectionMysqli::get_instance();
-
 $data = $instance->query("SELECT * FROM producto");
-
-
-
 $products = $data->fetch_all(MYSQLI_ASSOC);
 
-
-
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,8 +23,6 @@ $products = $data->fetch_all(MYSQLI_ASSOC);
   <link rel="stylesheet" href="assets/css/MENU-Navbar---Apple.css">
   <link rel="stylesheet" href="assets/css/MENU.css">
   <link rel="stylesheet" href="assets/css/reparandoMenuResponsivo.css">
-
-
   <style>
     /*Estilo para ajustar los parrafos a una cantidad de renglones */
     #parrafoAltura {
@@ -55,19 +44,10 @@ $products = $data->fetch_all(MYSQLI_ASSOC);
       min-height: 600px;
     }
   </style>
-
-
 </head>
-
 <body>
   <?php include_once 'menu.php' ?>
-
-  <div class="
-      bootstrap_cards2
-      container
-      py-5
-      mt-5
-    ">
+  <div class="bootstrap_cards container py-5 mt-5">
     <table class="table table-striped">
       <thead>
         <tr>
@@ -81,7 +61,6 @@ $products = $data->fetch_all(MYSQLI_ASSOC);
       </thead>
       <tbody>
         <?php foreach ($products as $product) {
-
         ?>
           <tr>
             <td>
@@ -113,13 +92,8 @@ $products = $data->fetch_all(MYSQLI_ASSOC);
       </tbody>
     </table>
   </div>
-
-
   <script src="assets/bootstrap/js/bootstrap.min.js"></script>
   <script src="assets/js/MENU-Navbar---Apple.js"></script>
 </body>
-
-
 </body>
-
 </html>
