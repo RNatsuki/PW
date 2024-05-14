@@ -1,14 +1,19 @@
 <?php
 
 require_once '../db.php';
-
+include_once 'limpia.php';
 $instancia = DatabaseConnectionMysqli::get_instance();
 
 $id = $_GET['id'];
-$title = $_POST['titulo'];
-$description = $_POST['descripcion'];
-$price = $_POST['precio'];
-$category = $_POST['categoria'];
+
+$title = limpia($_POST['titulo']);
+
+$description = limpia($_POST['descripcion']);
+
+$price = limpia($_POST['precio']);
+
+$category = limpia($_POST['categoria']);
+
 $image = $_FILES['imagen']['tmp_name'];
 
 if (!$image) {
