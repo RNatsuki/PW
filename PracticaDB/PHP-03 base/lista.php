@@ -1,8 +1,7 @@
 <?php
 include 'db.php';
 
-$instance = DatabaseConnectionMysqli::get_instance();
-$data = $instance->query("SELECT * FROM producto");
+$data = DatabaseConnectionMysqli::query("SELECT * FROM producto");
 $products = $data->fetch_all(MYSQLI_ASSOC);
 
 ?>

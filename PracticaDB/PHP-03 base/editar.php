@@ -1,7 +1,7 @@
 <?php
 include_once 'db.php';
 $id = $_GET['id'] ?? "1";
-$data = DatabaseConnectionMysqli::get_instance()->query("SELECT * FROM producto WHERE id = '$id'");
+$data = DatabaseConnectionMysqli::query("SELECT * FROM producto WHERE id = '$id'");
 $product = $data->fetch_all(MYSQLI_ASSOC);
 
 ?>

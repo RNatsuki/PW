@@ -6,18 +6,13 @@ class DatabaseConnectionMysqli
   private static $username = "root";
   private static $password = "";
   private static $database = "productos";
-
   public static  $connection;
-
 
   public static function query(string $query)
   {
     $instance = self::get_instance();
-
     return $instance->query($query);
   }
-
-  
 
   public static function get_instance()
   {
